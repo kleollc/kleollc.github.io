@@ -82,3 +82,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+(function setupStripCarousel() {
+  const strip = document.getElementById("tStrip");
+  if (!strip) return;
+
+  const cards = Array.from(strip.querySelectorAll(".shot"));
+  if (!cards.length) return;
+
+  const btnPrev = document.querySelector("[data-strip-prev]");
+  const btnNext = document.querySelector("[data-strip-next]");
+
+  let index = 0;
+
+  function scrollToIndex(i) {
+    index = (i + cards.length) % cards.length; // wrap
+    cards[index].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+  }
+
+  btnPrev?.addEventListener("click", () => scrollToIndex(index - 1));
+  btnNext?.addEventListener("click", () => scrollToIndex(index + 1));
+
+  // Keep index in sync when user scrolls manually (touchpad/swipe)
+  let raf = null;
+  strip.addEventListener("scroll", () => {
+    if (raf) cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      const stripLeft = strip.getBoundingClientRect().left;
+      let best = 0;
+      let bestDist = Infinity;
+
+      cards.forEach((card, i) => {
+        const left = card.getBoundingClientRect().left;
+        const d = Math.abs(left - stripLeft);
+        if (d < bestDist) {
+          bestDist = d;
+          best = i;
+        }
+      });
+
+      index = best;
+    });
+  }, { passive: true });
+
+  // Keyboard support when strip is focused
+  strip.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); scrollToIndex(index - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); scrollToIndex(index + 1); }
+  });
+
+  // Optional: start aligned to first card on load
+  scrollToIndex(0);
+})();
