@@ -216,7 +216,7 @@ main{ padding-top: 0 !important; }
   height:100%;
   width:min(420px, 90vw);
 
-  background:#000;
+  background:#101957;
   color:#fff;
   padding: 60px 40px;
 
@@ -238,7 +238,7 @@ main{ padding-top: 0 !important; }
   font-size:12px;
   letter-spacing:.22em;
   text-transform:uppercase;
-  color: rgba(255,255,255,.70);
+  color: #EE6266
 }
 
 .closeBtn{
