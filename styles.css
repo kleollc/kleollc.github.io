@@ -642,6 +642,18 @@ main{ padding-top: 0 !important; }
   letter-spacing: inherit;
 }
 
+/* Services: stop carousel once split layout begins */
+@media (min-width: 900px){
+  #what-we-do .strip{
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+  #what-we-do .strip .shot{
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
 /* ======================================================
    11) Founder card
    ====================================================== */
@@ -1084,6 +1096,64 @@ main{ padding-top: 0 !important; }
 #what-we-do .bandTitle > h2{ color: var(--accent); }
 
 /* ======================================================
+   What we do: responsive 3-column grid (not a carousel)
+   ====================================================== */
+
+#what-we-do .strip{
+  display: grid;
+  grid-template-columns: 1fr;     /* mobile: 1 column */
+  gap: clamp(16px, 2.2vw, 24px);
+
+  overflow: visible;             /* kill horizontal scroll */
+  scroll-snap-type: none;
+  padding: 0;                    /* optional: cleaner spacing */
+}
+
+/* Make cards behave like normal grid items */
+#what-we-do .shot{
+  flex: initial;
+  width: 100%;
+  min-width: 0;
+}
+
+/* tablet: 2 columns */
+@media (min-width: 640px){
+  #what-we-do .strip{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* desktop: 3 columns */
+@media (min-width: 920px){
+  #what-we-do .strip{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ======================================================
+   What we do: center the cards (remove split offset)
+   ====================================================== */
+
+/* Let the right side span full width for this section */
+#what-we-do .servicesRight{
+  grid-column: 1 / -1;
+}
+
+/* Hide the empty left spacer column in this section */
+#what-we-do .servicesLeft{
+  display: none;
+}
+
+/* Keep the split wrapper from forcing awkward spacing */
+#what-we-do .servicesSplit{
+  grid-template-columns: 1fr;   /* single column */
+}
+
+#what-we-do .strip{
+  max-width: 1160px;  /* or 980px if you want tighter */
+  margin: 0 auto;
+}
+/* ======================================================
    Trusted / Client Logos (improved sizing)
    ====================================================== */
 
@@ -1172,4 +1242,115 @@ main{ padding-top: 0 !important; }
 
 section {
   scroll-margin-top: 50px; /* match header height */
+}
+
+/* ======================================================
+   Policies: top-down stack (Privacy / Terms / DE&I)
+   ====================================================== */
+/* ======================================================
+   Policy pages: standard top-down typography
+   ====================================================== */
+
+.policyPage{
+  max-width: 78ch;
+  margin: 18px auto 0;   /* centers horizontally */
+  color: var(--ink);
+}
+
+.policyMeta{
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.policyPage h3{
+  margin: 26px 0 10px;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.policyPage p{
+  margin: 0 0 12px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.policyPage ul{
+  margin: 10px 0 14px;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.policyPage li{
+  margin: 6px 0;
+}
+
+/* Optional TOC */
+.policyToc{
+  margin: 18px 0 22px;
+  padding: 16px 16px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.70);
+}
+
+.policyToc ul{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.policyToc li{
+  margin: 6px 0;
+}
+
+/* ======================================================
+   Legal pages: force blue header at top
+   ====================================================== */
+
+body.legalPage .siteHeader{
+  background: rgba(16,25,87,0.95);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,.15);
+}
+
+/* Ensure burger + icons stay white */
+body.legalPage .burger span{
+  background:#fff;
+}
+
+/* Ensure burger + icons stay white */
+body.legalPage .bandHead{
+  padding-top: 20px;
+}
+
+/* ======================================================
+   Overlay Menu – Legal Links
+   ====================================================== */
+
+.menuLegal{
+  margin-top: auto;             /* pushes to bottom */
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,.15);
+
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.menuLegal a{
+  color: rgba(255,255,255,.65);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.menuLegal a:hover{
+  opacity: .85;
+  transform: translateX(3px);
 }

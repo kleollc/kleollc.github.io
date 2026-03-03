@@ -1,576 +1,580 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>KLEO L.L.C.</title>
+      <title>KLEO L.L.C.</title>
 
-    <!-- Favicon / Icons -->
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png" />
-    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
-    <link rel="manifest" href="./img/site.webmanifest" />
+      <!-- Favicon / Icons -->
+      <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png" />
+      <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+      <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+      <link rel="manifest" href="./img/site.webmanifest" />
 
-    <!-- Theme -->
-    <meta name="theme-color" content="#101957" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <!-- Theme -->
+      <meta name="theme-color" content="#101957" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+      <link rel="stylesheet" href="styles.css" />
+    </head>
 
-  <body>
-    <a class="skip" href="#content">Skip to content</a>
+    <body>
+      <a class="skip" href="#content">Skip to content</a>
 
-    <!-- Top Bar -->
-    <header class="siteHeader">
-      <div class="container">
-        <div class="bar">
-          <!-- Left: Logo -->
-          <a class="brand" href="#content" aria-label="Home">
-            <img
-              id="brandLogo"
-              src="./img/logo-kleo-llc-wb.png"
-              data-logo-top="./img/logo-kleo-llc-wb.png"
-              data-logo-scrolled="./img/logo-kleo-llc-bw.png"
-              alt="KLEO L.L.C."
-              class="brandLogo"
-            />
+      <!-- Top Bar -->
+      <header class="siteHeader">
+        <div class="container">
+          <div class="bar">
+            <!-- Left: Logo -->
+            <a class="brand" href="#content" aria-label="Home">
+              <img
+                id="brandLogo"
+                src="./img/logo-kleo-llc-wb.png"
+                data-logo-top="./img/logo-kleo-llc-wb.png"
+                data-logo-scrolled="./img/logo-kleo-llc-bw.png"
+                alt="KLEO L.L.C."
+                class="brandLogo"
+              />
+            </a>
+
+            <!-- Right side -->
+            <div class="headerRight">
+              <!-- Social Icons -->
+              <div class="socialIcons">
+                <a
+                  href="https://www.instagram.com/kleollc/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2" />
+                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                  </svg>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/vasiepapadopoulos"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                >
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="2" />
+                    <path
+                      d="M7 10v7M7 7v.01M11 17v-4a2 2 0 014 0v4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Hamburger -->
+              <button
+                class="menuBtn"
+                id="openMenu"
+                aria-label="Open menu"
+                aria-haspopup="dialog"
+                aria-controls="menuOverlay"
+                aria-expanded="false"
+              >
+                <span class="burger" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Overlay Menu -->
+      <div class="overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Menu">
+        <div class="panel">
+          <div class="panelTop">
+            <div class="panelLabel">Navigate</div>
+            <button class="closeBtn" id="closeMenu" aria-label="Close menu">&times;</button>
+          </div>
+
+          <nav class="menuGrid" aria-label="Overlay navigation">
+            <a href="#who-we-are"><span>Who we are</span><span class="meta">01</span></a>
+            <a href="#about-you"><span>About you</span><span class="meta">02</span></a>
+            <a href="#what-we-do"><span>What we do</span><span class="meta">03</span></a>
+            <a href="#our-process"><span>Our process</span><span class="meta">04</span></a>
+            <a href="#about-us-founder"><span>About us - Founder</span><span class="meta">05</span></a>
+            <a href="#testimonials"><span>Testimonials</span><span class="meta">06</span></a>
+          </nav>
+          <div class="menuLegal">
+  <a href="./privacy-policy.html">Privacy Policy</a>
+  <a href="./terms-of-service.html">Terms of Service</a>
+</div>
+        </div>
+      </div>
+
+      <main id="content">
+        <!-- Hero -->
+        <section class="heroPhoto" aria-label="Intro">
+          <img
+            class="heroPhotoImg"
+            src="./img/brooklyn-vassiepops.jpg"
+            alt="Black and white city bridge scene"
+            loading="eager"
+          />
+
+          <div class="heroPhotoOverlay" aria-hidden="true"></div>
+
+          <div class="heroPhotoContent">
+            <img class="heroLogo" src="./img/logo-kleo-llc-wb.png" alt="KLEO L.L.C. logo" />
+          </div>
+
+          <a class="scrollCue" href="#who-we-are" aria-label="Scroll to next section">
+            <span></span>
           </a>
+        </section>
 
-          <!-- Right side -->
-          <div class="headerRight">
-            <!-- Social Icons -->
-            <div class="socialIcons">
-              <a
-                href="https://www.instagram.com/kleollc/"
-                target="_blank"
-                rel="noopener"
-                aria-label="Instagram"
-              >
-                <svg viewBox="0 0 24 24" fill="none">
-                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2" />
-                  <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
-                  <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
-                </svg>
-              </a>
+        <!-- 01 Who we are -->
+        <section class="band" id="who-we-are" aria-label="Who we are">
+          <div class="container">
+            <div class="bandHead">
+              <div class="bandNum">01</div>
+              <div class="bandTitle">
+                <h2>
+                  KLEO is a New York City based strategic communications advisory firm that helps organizations
+                  and executives manage their brands through tailored business plans and training.
+                </h2>
+                <h2>
+                  Your reputation is critical in today’s digital and information-heavy world. You must signal
+                  that you are credible, trustworthy, and that you deliver on a promise.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </section>
 
-              <a
-                href="https://www.linkedin.com/in/vasiepapadopoulos"
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-              >
-                <svg viewBox="0 0 24 24" fill="none">
-                  <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="2" />
-                  <path
-                    d="M7 10v7M7 7v.01M11 17v-4a2 2 0 014 0v4"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
+        <!-- Divider (1 inch) -->
+        <div class="imageDivider" aria-hidden="true">
+          <img src="./img/barcelona-vassiepops.jpg" alt="" />
+        </div>
+
+        <!-- 02 About you -->
+        <section class="band bandAlt" id="about-you" aria-label="About you">
+          <div class="container">
+            <div class="bandHead">
+              <div class="bandNum">02</div>
+              <div class="bandTitle">
+                <h2>About you—</h2>
+
+                <div class="serveBig">
+                  <div class="serveBigItem">
+                    <span class="serveBigNum">01</span>
+                    <span class="serveBigText">Corporation navigating change or critical issues</span>
+                  </div>
+
+                  <div class="serveBigItem">
+                    <span class="serveBigNum">02</span>
+                    <span class="serveBigText">Association balancing mission with membership</span>
+                  </div>
+
+                  <div class="serveBigItem">
+                    <span class="serveBigNum">03</span>
+                    <span class="serveBigText">Non-profit elevating visibility through public conversation</span>
+                  </div>
+
+                  <div class="serveBigItem">
+                    <span class="serveBigNum">04</span>
+                    <span class="serveBigText">Organization in a highly regulated industry</span>
+                  </div>
+
+                  <div class="serveBigItem">
+                    <span class="serveBigNum">05</span>
+                    <span class="serveBigText">Executive or consultant building authority and refining presentations</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Hamburger -->
-            <button
-              class="menuBtn"
-              id="openMenu"
-              aria-label="Open menu"
-              aria-haspopup="dialog"
-              aria-controls="menuOverlay"
-              aria-expanded="false"
-            >
-              <span class="burger" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </span>
-            </button>
+        <!-- Trusted By -->
+          <div class="trustedBlock" aria-label="Organizaions that trust us">
+            <div class="trustedTitle">Organizations that trust us</div>
+            
+            <div class="trustedGrid">
+              <img src="./img/logo-dairy-farmers-ontario.png" alt="Diary Farmers of Ontario">
+              <img src="./img/logo-ivey-business-school.png" alt="Ivey Business School">
+              <img src="./img/logo-md-financial-management.png" alt="MD Financial Management">
+              <img src="./img/logo-ontario-ministry-finance.png" alt="Ontario Ministry of Finance">
+              <img src="./img/logo-the-great-outdoors-fund.png" alt="The Great Outdoors Fund">
+              <img src="./img/logo-ontario-energy-board.png" alt="Ontario Energy Board">
+              <img src="./img/logo-raymond-james.png" alt="Raymond James">
+              <img src="./img/logo-changemakers.png" alt="Changemakers">
+            </div>
+          </div> 
+
+          </div> 
+        </section>
+
+        <!-- Divider (1 inch) -->
+        <div class="imageDivider" aria-hidden="true">
+          <img src="./img/brooklyn-vassiepops.jpg" alt="" />
+        </div>
+
+        <!-- 03 What we do (1/3 title + 2/3 cards) -->
+      <section class="band" id="what-we-do" aria-label="What we do">
+    <div class="container">
+
+      <!-- aligned number + title -->
+      <div class="bandHead">
+        <div class="bandNum">03</div>
+        <div class="bandTitle">
+          <h2 class="servicesTitle">What we do</h2>
+        </div>
+      </div>
+
+      <!-- split layout starts AFTER the band head -->
+      <div class="servicesSplit">
+        <div class="servicesLeft" aria-hidden="true"></div>
+
+        <div class="servicesRight">
+          <div class="strip" aria-label="What we do gallery">
+
+            <!-- CARD 1 -->
+            <article class="shot">
+              <div class="cardBody">
+                <h3>Strategy</h3>
+                <div class="pillList">
+                  <span class="pillTag">Strategic communications planning</span>
+                  <span class="pillTag">Reputation analysis &amp; tracking</span>
+                  <span class="pillTag">Ethical AI advisory</span>
+                  <span class="pillTag">Positioning &amp; storytelling</span>
+                  <span class="pillTag">Ad-hoc strategic advisory</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="shot">
+              <div class="cardBody">
+                <h3>Crisis response &amp; issues management</h3>
+                <div class="pillList">
+                  <span class="pillTag">Crisis workshops &amp; simulations</span>
+                  <span class="pillTag">AI-informed crisis planning</span>
+                  <span class="pillTag">Issues management frameworks</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="shot">
+              <div class="cardBody">
+                <h3>Executive presence &amp; visibility</h3>
+                <div class="pillList">
+                  <span class="pillTag">Leadership communications coaching</span>
+                  <span class="pillTag">Media &amp; spokesperson preparation</span>
+                  <span class="pillTag">Thought leadership planning</span>
+                  <span class="pillTag">Executive LinkedIn strategy</span>
+                </div>
+              </div>
+            </article>
+
           </div>
         </div>
       </div>
-    </header>
 
-    <!-- Overlay Menu -->
-    <div class="overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Menu">
-      <div class="panel">
-        <div class="panelTop">
-          <div class="panelLabel">Navigate</div>
-          <button class="closeBtn" id="closeMenu" aria-label="Close menu">&times;</button>
+    </div>
+  </section>
+
+  <!-- Divider (1 inch) -->
+  <div class="imageDivider" aria-hidden="true">
+    <img src="./img/brooklyn-vassiepops.jpg" alt="" />
+  </div>
+
+  <!-- 04 Our process -->
+
+  <!-- 05 Founder -->
+  <section class="band" id="about-us-founder" aria-label="Founder">
+    <div class="container">
+      <div class="bandHead">
+        <div class="bandNum">05</div>
+        <div class="bandTitle">
+          <h2>Founder</h2>
+          <p style="color:#ee6266;">Focused on reputation, leadership communications, and high-stakes moments.</p>
+        </div>
+      </div>
+
+      <div class="founderCard">
+        <!-- Portrait -->
+        <div class="founderMedia">
+          <!-- Replace with your portrait file -->
+          <img src="./img/vasie-papadopoulos-profile.jpeg" alt="Portrait of the founder of KLEO L.L.C." loading="lazy" />
         </div>
 
-        <nav class="menuGrid" aria-label="Overlay navigation">
-          <a href="#who-we-are"><span>Who we are</span><span class="meta">01</span></a>
-          <a href="#about-you"><span>About you</span><span class="meta">02</span></a>
-          <a href="#what-we-do"><span>What we do</span><span class="meta">03</span></a>
-          <a href="#our-process"><span>Our process</span><span class="meta">04</span></a>
-          <a href="#about-us-founder"><span>About us - Founder</span><span class="meta">05</span></a>
-          <a href="#testimonials"><span>Testimonials</span><span class="meta">06</span></a>
+        <!-- Content -->
+        <div class="founderBody">
+          <div class="pill">Bio</div>
+          <h3 class="founderName">Vasie Papadopoulos</h3>
+
+          <p class="founderBio">
+            KLEO partners with organizations and executives navigating complexity—building trusted narratives,
+            preparing leaders for visibility, and developing communications systems that hold under pressure.
+          </p>
+
+          <p class="founderBio">
+            With experience across corporate, non-profit, and regulated sectors, KLEO brings structure, clarity,
+            and restraint to moments where credibility matters most.
+          </p>
+
+          <div class="pill">Areas of focus</div>
+          <div class="pillList founderPills" aria-label="Areas of focus">
+            <span class="pillTag">Reputation strategy</span>
+            <span class="pillTag">Issues management</span>
+            <span class="pillTag">Crisis preparedness</span>
+            <span class="pillTag">Executive communications</span>
+            <span class="pillTag">Media training</span>
+            <span class="pillTag">AI &amp; ethics advisory</span>
+          </div>
+
+          <div class="founderLinks">
+            <a class="quietLink" href="https://www.linkedin.com/in/vasiepapadopoulos" target="_blank" rel="noopener">
+              LinkedIn
+            </a>
+            <span aria-hidden="true">·</span>
+            <a class="quietLink" href="#contact">Work with KLEO</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Testimonials (scroll strip + arrows) -->
+  <section class="band bandAlt" id="testimonials" aria-label="Testimonials">
+    <div class="container">
+      <div class="bandHead">
+        <div class="bandNum">06</div>
+        <div class="bandTitle">
+          <h2>What people are saying about KLEO</h2>
+        </div>
+      </div>
+
+      <div class="stripWrap" aria-label="Testimonials carousel">
+        <button class="stripBtn" type="button" data-strip-prev aria-label="Previous testimonial">
+          <span aria-hidden="true">‹</span>
+        </button>
+
+        <div class="strip" id="tStrip" tabindex="0" aria-roledescription="carousel">
+          <!-- 1 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Client</div>
+              <p class="tQuote">“KLEO helped us clarify the narrative and align leadership under pressure.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Title, Organization</div></div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Executive</div>
+              <p class="tQuote">“Practical, strategic, and calm. The coaching made our messaging sharper fast.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Executive, Industry</div></div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Partner</div>
+              <p class="tQuote">“A rare mix of rigor and taste. The work translated into better decisions.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Partner, Firm</div></div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Non-profit</div>
+              <p class="tQuote">“KLEO elevated our visibility without compromising our mission or tone.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Director, Non-profit</div></div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Regulated</div>
+              <p class="tQuote">“They built a framework our team could actually use—clear, durable, repeatable.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Comms Lead, Sector</div></div>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Founder</div>
+              <p class="tQuote">“The positioning work made our story coherent and credible across audiences.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Founder, Company</div></div>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Training</div>
+              <p class="tQuote">“The simulation was intense—in the best way. We’re genuinely prepared now.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">VP, Organization</div></div>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Board</div>
+              <p class="tQuote">“They brought clarity to sensitive decisions and kept everyone aligned.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Board Member</div></div>
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Comms</div>
+              <p class="tQuote">“A smart partner who improves the work and makes the team better.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Head of Comms</div></div>
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="shot tCard">
+            <div class="cardBody">
+              <div class="pill">Strategy</div>
+              <p class="tQuote">“Strong counsel, fast execution, and excellent judgment in high-stakes moments.”</p>
+              <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Advisor, Firm</div></div>
+            </div>
+          </article>
+        </div>
+
+        <button class="stripBtn" type="button" data-strip-next aria-label="Next testimonial">
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+    </div>
+  </section>
+      </main>
+
+      <footer class="siteFooter siteFooterNew" aria-label="Footer">
+    <div class="container footerShell">
+      <div class="footerTop">
+        <!-- Brand / About -->
+        <div class="footerBrand">
+          <div class="footerMark">
+            <img style="max-height: 100px;" src="./img/logo-kleo-llc-wb.png">
+          </div>
+          <p class="footerAbout">
+            Strategic communications advisory for organizations and executives navigating visibility, change,
+            and high-stakes moments.
+          </p>
+
+          <div class="footerSocial" aria-label="Social links">
+            <a href="https://www.instagram.com/kleollc/" target="_blank" rel="noopener" aria-label="Instagram">
+              IG
+            </a>
+            <a href="https://www.linkedin.com/in/vasiepapadopoulos" target="_blank" rel="noopener" aria-label="LinkedIn">
+              IN
+            </a>
+          </div>
+        </div>
+
+        <!-- Link columns -->
+        <nav class="footerCols" aria-label="Footer navigation">
+          <div class="footerCol">
+            <div class="footerColTitle">Services</div>
+            <a href="#what-we-do">Strategy</a>
+            <a href="#what-we-do">Crisis response</a>
+            <a href="#what-we-do">Executive presence</a>
+          </div>
+
+          <div class="footerCol">
+            <div class="footerColTitle">Company</div>
+            <a href="#who-we-are">Who we are</a>
+            <a href="#about-you">About you</a>
+            <a href="#what-we-do">What we do</a>
+            <a href="#our-process">Our process</a>
+            <a href="#about-us-founder">About us - Founder</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#book-a-consultation">Book a consultation</a>
+          </div>
+
+          <div class="footerCol">
+            <div class="footerColTitle">Resources</div>
+            <a href="#">Insights</a>
+            <a href="#">Press</a>
+            <a href="#">Policies</a>
+          </div>
         </nav>
-      </div>
-    </div>
 
-    <main id="content">
-      <!-- Hero -->
-      <section class="heroPhoto" aria-label="Intro">
-        <img
-          class="heroPhotoImg"
-          src="./img/brooklyn-vassiepops.jpg"
-          alt="Black and white city bridge scene"
-          loading="eager"
-        />
+        <!-- Newsletter -->
+        <div class="footerNewsletter">
+          <div class="footerColTitle">Newsletter</div>
+          <p class="footerAbout">
+            Occasional notes on reputation, leadership communications, and strategy.
+          </p>
 
-        <div class="heroPhotoOverlay" aria-hidden="true"></div>
-
-        <div class="heroPhotoContent">
-          <img class="heroLogo" src="./img/logo-kleo-llc-wb.png" alt="KLEO L.L.C. logo" />
-        </div>
-
-        <a class="scrollCue" href="#who-we-are" aria-label="Scroll to next section">
-          <span></span>
-        </a>
-      </section>
-
-      <!-- 01 Who we are -->
-      <section class="band" id="who-we-are" aria-label="Who we are">
-        <div class="container">
-          <div class="bandHead">
-            <div class="bandNum">01</div>
-            <div class="bandTitle">
-              <h2>
-                KLEO is a New York City based strategic communications advisory firm that helps organizations
-                and executives manage their brands through tailored business plans and training.
-              </h2>
-              <h2>
-                Your reputation is critical in today’s digital and information-heavy world. You must signal
-                that you are credible, trustworthy, and that you deliver on a promise.
-              </h2>
-            </div>
+          <div class="newsletterEmbed">
+            <!-- Paste your Mailchimp embed form RIGHT HERE -->
+            <!-- MAILCHIMP EMBED START -->
+            <div id="mc_embed_shell">
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+          #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width: px;}
+          /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+  </style>
+  <div id="mc_embed_signup">
+      <form action="https://aliveshoes.us1.list-manage.com/subscribe/post?u=969376007f9e0128163c1e479&amp;id=ffd4c5ef5f&amp;f_id=00dae3e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+          <div id="mc_embed_signup_scroll">
+              <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+              <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+          <div id="mce-responses" class="clear foot">
+              <div class="response" id="mce-error-response" style="display: none;"></div>
+              <div class="response" id="mce-success-response" style="display: none;"></div>
           </div>
-        </div>
-      </section>
-
-      <!-- Divider (1 inch) -->
-      <div class="imageDivider" aria-hidden="true">
-        <img src="./img/barcelona-vassiepops.jpg" alt="" />
+      <div aria-hidden="true" style="position: absolute; left: -5000px;">
+          /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+          <input type="text" name="b_969376007f9e0128163c1e479_ffd4c5ef5f" tabindex="-1" value="">
       </div>
-
-      <!-- 02 About you -->
-      <section class="band bandAlt" id="about-you" aria-label="About you">
-        <div class="container">
-          <div class="bandHead">
-            <div class="bandNum">02</div>
-            <div class="bandTitle">
-              <h2>About you—</h2>
-
-              <div class="serveBig">
-                <div class="serveBigItem">
-                  <span class="serveBigNum">01</span>
-                  <span class="serveBigText">Corporation navigating change or critical issues</span>
-                </div>
-
-                <div class="serveBigItem">
-                  <span class="serveBigNum">02</span>
-                  <span class="serveBigText">Association balancing mission with membership</span>
-                </div>
-
-                <div class="serveBigItem">
-                  <span class="serveBigNum">03</span>
-                  <span class="serveBigText">Non-profit elevating visibility through public conversation</span>
-                </div>
-
-                <div class="serveBigItem">
-                  <span class="serveBigNum">04</span>
-                  <span class="serveBigText">Organization in a highly regulated industry</span>
-                </div>
-
-                <div class="serveBigItem">
-                  <span class="serveBigNum">05</span>
-                  <span class="serveBigText">Executive or consultant building authority and refining presentations</span>
-                </div>
+          <div class="optionalParent">
+              <div class="clear foot">
+                  <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                  <p style="margin: 0px auto;"><a href="http://eepurl.com/jkFGnA" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
               </div>
-            </div>
           </div>
-
-      <!-- Trusted By -->
-        <div class="trustedBlock" aria-label="Organizaions that trust us">
-          <div class="trustedTitle">Organizations that trust us</div>
-          
-          <div class="trustedGrid">
-            <img src="./img/logo-dairy-farmers-ontario.png" alt="Diary Farmers of Ontario">
-            <img src="./img/logo-ivey-business-school.png" alt="Ivey Business School">
-            <img src="./img/logo-md-financial-management.png" alt="MD Financial Management">
-            <img src="./img/logo-ontario-ministry-finance.png" alt="Ontario Ministry of Finance">
-            <img src="./img/logo-the-great-outdoors-fund.png" alt="The Great Outdoors Fund">
-            <img src="./img/logo-ontario-energy-board.png" alt="Ontario Energy Board">
-            <img src="./img/logo-raymond-james.png" alt="Raymond James">
-            <img src="./img/logo-changemakers.png" alt="Changemakers">
-          </div>
-        </div> 
-
-        </div> 
-      </section>
-
-      <!-- Divider (1 inch) -->
-      <div class="imageDivider" aria-hidden="true">
-        <img src="./img/brooklyn-vassiepops.jpg" alt="" />
       </div>
-
-      <!-- 03 What we do (1/3 title + 2/3 cards) -->
-     <section class="band" id="what-we-do" aria-label="What we do">
-  <div class="container">
-
-    <!-- aligned number + title -->
-    <div class="bandHead">
-      <div class="bandNum">03</div>
-      <div class="bandTitle">
-        <h2 class="servicesTitle">What we do</h2>
-      </div>
-    </div>
-
-    <!-- split layout starts AFTER the band head -->
-    <div class="servicesSplit">
-      <div class="servicesLeft" aria-hidden="true"></div>
-
-      <div class="servicesRight">
-        <div class="strip" aria-label="What we do gallery">
-
-          <!-- CARD 1 -->
-          <article class="shot">
-            <div class="cardBody">
-              <h3>Strategy</h3>
-              <div class="pillList">
-                <span class="pillTag">Strategic communications planning</span>
-                <span class="pillTag">Reputation analysis &amp; tracking</span>
-                <span class="pillTag">Ethical AI advisory</span>
-                <span class="pillTag">Positioning &amp; storytelling</span>
-                <span class="pillTag">Ad-hoc strategic advisory</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- CARD 2 -->
-          <article class="shot">
-            <div class="cardBody">
-              <h3>Crisis response &amp; issues management</h3>
-              <div class="pillList">
-                <span class="pillTag">Crisis workshops &amp; simulations</span>
-                <span class="pillTag">AI-informed crisis planning</span>
-                <span class="pillTag">Issues management frameworks</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- CARD 3 -->
-          <article class="shot">
-            <div class="cardBody">
-              <h3>Executive presence &amp; visibility</h3>
-              <div class="pillList">
-                <span class="pillTag">Leadership communications coaching</span>
-                <span class="pillTag">Media &amp; spokesperson preparation</span>
-                <span class="pillTag">Thought leadership planning</span>
-                <span class="pillTag">Executive LinkedIn strategy</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </div>
-
+  </form>
   </div>
-</section>
-
- <!-- Divider (1 inch) -->
-<div class="imageDivider" aria-hidden="true">
-  <img src="./img/brooklyn-vassiepops.jpg" alt="" />
-</div>
-
-<!-- 04 Our process -->
-
-<!-- 05 Founder -->
-<section class="band" id="about-us-founder" aria-label="Founder">
-  <div class="container">
-    <div class="bandHead">
-      <div class="bandNum">05</div>
-      <div class="bandTitle">
-        <h2>Founder</h2>
-        <p style="color:#ee6266;">Focused on reputation, leadership communications, and high-stakes moments.</p>
-      </div>
-    </div>
-
-    <div class="founderCard">
-      <!-- Portrait -->
-      <div class="founderMedia">
-        <!-- Replace with your portrait file -->
-        <img src="./img/vasie-papadopoulos-profile.jpeg" alt="Portrait of the founder of KLEO L.L.C." loading="lazy" />
-      </div>
-
-      <!-- Content -->
-      <div class="founderBody">
-        <div class="pill">Bio</div>
-        <h3 class="founderName">Vasie Papadopoulos</h3>
-
-        <p class="founderBio">
-          KLEO partners with organizations and executives navigating complexity—building trusted narratives,
-          preparing leaders for visibility, and developing communications systems that hold under pressure.
-        </p>
-
-        <p class="founderBio">
-          With experience across corporate, non-profit, and regulated sectors, KLEO brings structure, clarity,
-          and restraint to moments where credibility matters most.
-        </p>
-
-        <div class="pill">Areas of focus</div>
-        <div class="pillList founderPills" aria-label="Areas of focus">
-          <span class="pillTag">Reputation strategy</span>
-          <span class="pillTag">Issues management</span>
-          <span class="pillTag">Crisis preparedness</span>
-          <span class="pillTag">Executive communications</span>
-          <span class="pillTag">Media training</span>
-          <span class="pillTag">AI &amp; ethics advisory</span>
-        </div>
-
-        <div class="founderLinks">
-          <a class="quietLink" href="https://www.linkedin.com/in/vasiepapadopoulos" target="_blank" rel="noopener">
-            LinkedIn
-          </a>
-          <span aria-hidden="true">·</span>
-          <a class="quietLink" href="#contact">Work with KLEO</a>
-        </div>
-      </div>
-    </div>
   </div>
-</section>
 
-<!-- 06 Testimonials (scroll strip + arrows) -->
-<section class="band bandAlt" id="testimonials" aria-label="Testimonials">
-  <div class="container">
-    <div class="bandHead">
-      <div class="bandNum">06</div>
-      <div class="bandTitle">
-        <h2>What people are saying about KLEO</h2>
-      </div>
-    </div>
-
-    <div class="stripWrap" aria-label="Testimonials carousel">
-      <button class="stripBtn" type="button" data-strip-prev aria-label="Previous testimonial">
-        <span aria-hidden="true">‹</span>
-      </button>
-
-      <div class="strip" id="tStrip" tabindex="0" aria-roledescription="carousel">
-        <!-- 1 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Client</div>
-            <p class="tQuote">“KLEO helped us clarify the narrative and align leadership under pressure.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Title, Organization</div></div>
+            <!-- MAILCHIMP EMBED END -->
           </div>
-        </article>
-
-        <!-- 2 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Executive</div>
-            <p class="tQuote">“Practical, strategic, and calm. The coaching made our messaging sharper fast.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Executive, Industry</div></div>
-          </div>
-        </article>
-
-        <!-- 3 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Partner</div>
-            <p class="tQuote">“A rare mix of rigor and taste. The work translated into better decisions.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Partner, Firm</div></div>
-          </div>
-        </article>
-
-        <!-- 4 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Non-profit</div>
-            <p class="tQuote">“KLEO elevated our visibility without compromising our mission or tone.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Director, Non-profit</div></div>
-          </div>
-        </article>
-
-        <!-- 5 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Regulated</div>
-            <p class="tQuote">“They built a framework our team could actually use—clear, durable, repeatable.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Comms Lead, Sector</div></div>
-          </div>
-        </article>
-
-        <!-- 6 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Founder</div>
-            <p class="tQuote">“The positioning work made our story coherent and credible across audiences.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Founder, Company</div></div>
-          </div>
-        </article>
-
-        <!-- 7 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Training</div>
-            <p class="tQuote">“The simulation was intense—in the best way. We’re genuinely prepared now.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">VP, Organization</div></div>
-          </div>
-        </article>
-
-        <!-- 8 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Board</div>
-            <p class="tQuote">“They brought clarity to sensitive decisions and kept everyone aligned.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Board Member</div></div>
-          </div>
-        </article>
-
-        <!-- 9 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Comms</div>
-            <p class="tQuote">“A smart partner who improves the work and makes the team better.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Head of Comms</div></div>
-          </div>
-        </article>
-
-        <!-- 10 -->
-        <article class="shot tCard">
-          <div class="cardBody">
-            <div class="pill">Strategy</div>
-            <p class="tQuote">“Strong counsel, fast execution, and excellent judgment in high-stakes moments.”</p>
-            <div class="tMeta"><div class="tName">Name Surname</div><div class="tRole">Advisor, Firm</div></div>
-          </div>
-        </article>
-      </div>
-
-      <button class="stripBtn" type="button" data-strip-next aria-label="Next testimonial">
-        <span aria-hidden="true">›</span>
-      </button>
-    </div>
-  </div>
-</section>
-    </main>
-
-    <footer class="siteFooter siteFooterNew" aria-label="Footer">
-  <div class="container footerShell">
-    <div class="footerTop">
-      <!-- Brand / About -->
-      <div class="footerBrand">
-        <div class="footerMark">
-          <img style="max-height: 100px;" src="./img/logo-kleo-llc-wb.png">
-        </div>
-        <p class="footerAbout">
-          Strategic communications advisory for organizations and executives navigating visibility, change,
-          and high-stakes moments.
-        </p>
-
-        <div class="footerSocial" aria-label="Social links">
-          <a href="https://www.instagram.com/kleollc/" target="_blank" rel="noopener" aria-label="Instagram">
-            IG
-          </a>
-          <a href="https://www.linkedin.com/in/vasiepapadopoulos" target="_blank" rel="noopener" aria-label="LinkedIn">
-            IN
-          </a>
         </div>
       </div>
 
-      <!-- Link columns -->
-      <nav class="footerCols" aria-label="Footer navigation">
-        <div class="footerCol">
-          <div class="footerColTitle">Services</div>
-          <a href="#what-we-do">Strategy</a>
-          <a href="#what-we-do">Crisis response</a>
-          <a href="#what-we-do">Executive presence</a>
-        </div>
+      <!-- Bottom bar -->
+      <div class="footerBottom">
+        <div>© <span id="year"></span> KLEO L.L.C. All rights reserved.</div>
 
-        <div class="footerCol">
-          <div class="footerColTitle">Company</div>
-          <a href="#who-we-are">Who we are</a>
-          <a href="#about-you">About you</a>
-          <a href="#what-we-do">What we do</a>
-          <a href="#our-process">Our process</a>
-          <a href="#about-us-founder">About us - Founder</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#book-a-consultation">Book a consultation</a>
-        </div>
-
-        <div class="footerCol">
-          <div class="footerColTitle">Resources</div>
-          <a href="#">Insights</a>
-          <a href="#">Press</a>
-          <a href="#">Policies</a>
-        </div>
-      </nav>
-
-      <!-- Newsletter -->
-      <div class="footerNewsletter">
-        <div class="footerColTitle">Newsletter</div>
-        <p class="footerAbout">
-          Occasional notes on reputation, leadership communications, and strategy.
-        </p>
-
-        <div class="newsletterEmbed">
-          <!-- Paste your Mailchimp embed form RIGHT HERE -->
-          <!-- MAILCHIMP EMBED START -->
-          <div id="mc_embed_shell">
-      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width: px;}
-        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-    <form action="https://aliveshoes.us1.list-manage.com/subscribe/post?u=969376007f9e0128163c1e479&amp;id=ffd4c5ef5f&amp;f_id=00dae3e4f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
-        <div id="mc_embed_signup_scroll">
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
-        <div id="mce-responses" class="clear foot">
-            <div class="response" id="mce-error-response" style="display: none;"></div>
-            <div class="response" id="mce-success-response" style="display: none;"></div>
-        </div>
-    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-        /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-        <input type="text" name="b_969376007f9e0128163c1e479_ffd4c5ef5f" tabindex="-1" value="">
-    </div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                <p style="margin: 0px auto;"><a href="http://eepurl.com/jkFGnA" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
-            </div>
-        </div>
-    </div>
-</form>
-</div>
-</div>
-
-          <!-- MAILCHIMP EMBED END -->
+        <div class="footerBottomLinks" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">DE&amp;I</a>
         </div>
       </div>
     </div>
+  </footer>
 
-    <!-- Bottom bar -->
-    <div class="footerBottom">
-      <div>© <span id="year"></span> KLEO L.L.C. All rights reserved.</div>
-
-      <div class="footerBottomLinks" aria-label="Legal links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">DE&amp;I</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+      <script src="script.js"></script>
+    </body>
+  </html>
