@@ -1350,6 +1350,73 @@ body.legalPage .bandHead{
   transition: opacity .2s ease, transform .2s ease;
 }
 
+/* ── Timeline (Our process) ─────────────────────────────── */
+
+.timeline{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+/* vertical rule */
+.timeline::before{
+  content: '';
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 23px;
+  width: 2px;
+  background: rgba(0,0,0,.1);
+}
+
+.timelineStep{
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 28px 0;
+  position: relative;
+}
+
+.timelineStep + .timelineStep{
+  border-top: 1px solid rgba(0,0,0,.07);
+}
+
+.timelineMarker{
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineTitle{
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.timelineDesc{
+  margin: 0;
+  color: rgba(0,0,0,.6);
+  line-height: 1.6;
+}
+
+/* ── end Timeline ───────────────────────────────────────── */
+
 .menuLegal a:hover{
   opacity: .85;
   transform: translateX(3px);
