@@ -1043,6 +1043,11 @@ main{ padding-top: 0 !important; }
   background: var(--ink) !important;
   color: #fff !important;
   font-weight: 900 !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  display: block !important;
+  width: 100% !important;
   cursor:pointer;
 }
 .footerNewsletter input[type="submit"]:hover,
