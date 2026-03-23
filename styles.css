@@ -3,6 +3,77 @@
    ====================================================== */
 
 /* ======================================================
+   0) Cookie consent banner
+   ====================================================== */
+
+.cookieBanner{
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: min(560px, calc(100vw - 32px));
+  background: var(--ink, #101957);
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 32px rgba(0,0,0,.28);
+}
+
+.cookieText{
+  flex: 1 1 200px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,.85);
+}
+
+.cookieText a{
+  color: #ee6266;
+  text-decoration: underline;
+}
+
+.cookieActions{
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cookieAccept{
+  padding: 9px 20px;
+  background: #ee6266;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity .2s ease;
+}
+.cookieAccept:hover{ opacity: .85; }
+
+.cookieDecline{
+  padding: 9px 20px;
+  background: transparent;
+  color: rgba(255,255,255,.7);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity .2s ease;
+}
+.cookieDecline:hover{ opacity: .7; }
+
+/* ======================================================
    1) Design tokens / globals
    ====================================================== */
 

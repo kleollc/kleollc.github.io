@@ -5,6 +5,30 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ======================================================
+     0) COOKIE CONSENT
+     ====================================================== */
+  const cookieBanner  = document.getElementById("cookieBanner");
+  const cookieAccept  = document.getElementById("cookieAccept");
+  const cookieDecline = document.getElementById("cookieDecline");
+
+  if (cookieBanner) {
+    // Show banner only if user hasn't responded yet
+    if (!localStorage.getItem("kleoCookieConsent")) {
+      cookieBanner.hidden = false;
+    }
+
+    cookieAccept?.addEventListener("click", () => {
+      localStorage.setItem("kleoCookieConsent", "accepted");
+      cookieBanner.hidden = true;
+    });
+
+    cookieDecline?.addEventListener("click", () => {
+      localStorage.setItem("kleoCookieConsent", "declined");
+      cookieBanner.hidden = true;
+    });
+  }
+
+  /* ======================================================
      0) YEAR
      ====================================================== */
   const yearEl = document.getElementById("year");
