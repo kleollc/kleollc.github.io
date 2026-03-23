@@ -6,9 +6,8 @@
    0) Cookie consent banner
    ====================================================== */
 
-.cookieBanner[hidden]{ display: none !important; }
-
 .cookieBanner{
+  display: none;
   position: fixed;
   bottom: 24px;
   left: 50%;
@@ -24,6 +23,9 @@
   gap: 20px;
   flex-wrap: wrap;
   box-shadow: 0 8px 32px rgba(0,0,0,.28);
+}
+.cookieBanner.is-visible{
+  display: flex;
 }
 
 .cookieText{

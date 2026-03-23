@@ -14,17 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (cookieBanner) {
     // Show banner only if user hasn't responded yet
     if (!localStorage.getItem("kleoCookieConsent")) {
-      cookieBanner.hidden = false;
+      cookieBanner.classList.add("is-visible");
     }
 
     cookieAccept?.addEventListener("click", () => {
       localStorage.setItem("kleoCookieConsent", "accepted");
-      cookieBanner.hidden = true;
+      cookieBanner.classList.remove("is-visible");
     });
 
     cookieDecline?.addEventListener("click", () => {
       localStorage.setItem("kleoCookieConsent", "declined");
-      cookieBanner.hidden = true;
+      cookieBanner.classList.remove("is-visible");
     });
   }
 
