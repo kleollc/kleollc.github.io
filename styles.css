@@ -141,6 +141,30 @@ main{ padding-top: 0 !important; }
   gap:24px;
 }
 
+.navConsultBtn{
+  display: inline-block;
+  padding: 9px 18px;
+  background: #ee6266;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.navConsultBtn:hover{
+  opacity: .85;
+  transform: translateY(-1px);
+}
+
+/* Hide on small screens to avoid crowding the nav */
+@media (max-width: 640px){
+  .navConsultBtn{ display: none; }
+}
+
 .socialIcons{
   display:flex;
   align-items:center;
@@ -743,6 +767,29 @@ main{ padding-top: 0 !important; }
   display:grid;
   gap:2px;
 }
+
+.tCta{
+  margin-top: 32px;
+  text-align: center;
+}
+.tCtaBtn{
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid rgba(255,255,255,.5);
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: opacity .2s ease, transform .2s ease, border-color .2s ease;
+}
+.tCtaBtn:hover{
+  opacity: .85;
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.8);
+}
 .tName{
   font-weight:800;
   letter-spacing:-.01em;
@@ -879,6 +926,25 @@ main{ padding-top: 0 !important; }
   opacity:.85;
   transform: translateY(-1px);
   border-color: rgba(255,255,255,.26);
+}
+
+.footerConsultBtn{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ee6266;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.footerConsultBtn:hover{
+  opacity: .85;
+  transform: translateY(-2px);
 }
 
 .footerCols{
@@ -1330,6 +1396,23 @@ body.legalPage .bandHead{
 /* ======================================================
    Overlay Menu – Legal Links
    ====================================================== */
+
+.menuConsultBtn{
+  display: block;
+  margin-top: 32px;
+  padding: 14px 24px;
+  background: #ee6266;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-align: center;
+  transition: opacity .2s ease;
+}
+.menuConsultBtn:hover{ opacity: .85; }
 
 .menuLegal{
   margin-top: auto;             /* pushes to bottom */
