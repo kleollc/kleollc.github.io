@@ -1409,10 +1409,51 @@ body.legalPage .bandHead{
   color: var(--ink);
 }
 
+.timelineLabel{
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #ee6266;
+}
+
 .timelineDesc{
-  margin: 0;
+  margin: 0 0 10px;
   color: rgba(0,0,0,.6);
   line-height: 1.6;
+}
+
+.timelineDesc:last-child{
+  margin-bottom: 0;
+}
+
+.bandSubtitle{
+  font-size: 20px !important;
+}
+
+.timelineCta{
+  margin-top: 48px;
+  text-align: center;
+}
+
+.btn{
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.btn:hover{
+  opacity: .85;
+  transform: translateY(-2px);
 }
 
 /* ── end Timeline ───────────────────────────────────────── */
