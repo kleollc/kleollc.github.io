@@ -11,21 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const cookieAccept  = document.getElementById("cookieAccept");
   const cookieDecline = document.getElementById("cookieDecline");
 
+  function dismissCookieBanner(value) {
+    try { localStorage.setItem("kleoCookieConsent", value); } catch(e) {}
+    if (cookieBanner) cookieBanner.style.display = "none";
+  }
+
   if (cookieBanner) {
-    // Show banner only if user hasn't responded yet
-    if (!localStorage.getItem("kleoCookieConsent")) {
+    let consented = false;
+    try { consented = !!localStorage.getItem("kleoCookieConsent"); } catch(e) {}
+
+    if (!consented) {
       cookieBanner.classList.add("is-visible");
     }
 
-    cookieAccept?.addEventListener("click", () => {
-      localStorage.setItem("kleoCookieConsent", "accepted");
-      cookieBanner.classList.remove("is-visible");
-    });
-
-    cookieDecline?.addEventListener("click", () => {
-      localStorage.setItem("kleoCookieConsent", "declined");
-      cookieBanner.classList.remove("is-visible");
-    });
+    cookieAccept?.addEventListener("click",  () => dismissCookieBanner("accepted"));
+    cookieDecline?.addEventListener("click", () => dismissCookieBanner("declined"));
   }
 
   /* ======================================================
